@@ -13,7 +13,7 @@
  */
 
 /*
-* NodeGenerator.java
+* KubernetesNodeToRundeckNodeMapper.java
 * 
 * User: Jean-Baptiste Guerraz <a href="mailto:jbguerraz@gmail.com">jbguerraz@gmail.com</a>
 * Created: Oct 18, 2010 7:03:37 PM
