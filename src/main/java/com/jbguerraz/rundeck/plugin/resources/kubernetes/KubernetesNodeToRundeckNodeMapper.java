@@ -16,7 +16,7 @@
 * KubernetesNodeToRundeckNodeMapper.java
 * 
 * User: Jean-Baptiste Guerraz <a href="mailto:jbguerraz@gmail.com">jbguerraz@gmail.com</a>
-* Created: Oct 18, 2010 7:03:37 PM
+* Created: 9/22/2016 4:42 PM
 * 
 */
 package com.jbguerraz.rundeck.plugin.resources.kubernetes;
@@ -42,7 +42,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 /**
- * InstanceToNodeMapper produces Rundeck node definitions from Kubernetes Nodes
+ * KubernetesNodeToRundeckNodeMapper produces Rundeck node definitions from Kubernetes Nodes
  *
  * @author Jean-Baptiste Guerraz <a href="mailto:jbguerraz@gmail.com">jbguerraz@gmail.com</a>
  */
