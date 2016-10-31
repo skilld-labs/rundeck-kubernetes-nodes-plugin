@@ -16,7 +16,7 @@
 * KubernetesNodeToRundeckNodeMapper.java
 * 
 * User: Jean-Baptiste Guerraz <a href="mailto:jbguerraz@gmail.com">jbguerraz@gmail.com</a>
-* Created: 9/22/2016 4:42 PM
+* Created: Oct 18, 2010 7:03:37 PM
 * 
 */
 package com.jbguerraz.rundeck.plugin.resources.kubernetes;
@@ -42,7 +42,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 /**
- * KubernetesNodeToRundeckNodeMapper produces Rundeck node definitions from Kubernetes Nodes
+ * InstanceToNodeMapper produces Rundeck node definitions from Kubernetes Nodes
  *
  * @author Jean-Baptiste Guerraz <a href="mailto:jbguerraz@gmail.com">jbguerraz@gmail.com</a>
  */
@@ -76,8 +76,7 @@ class KubernetesNodeToRundeckNodeMapper {
     }
 
     private void mapInstances(final NodeSetImpl nodeSet, final NodeList nodeList) {
-        final List<Node> nodes = nodeList.getItems();
-        for (final Node node : nodes) {
+        for (final Node node : nodeList.getItems()) {
             final INodeEntry iNodeEntry;
             try {
                 iNodeEntry = KubernetesNodeToRundeckNodeMapper.kubernetesNodeToRundeckNode(node);
@@ -96,11 +95,10 @@ class KubernetesNodeToRundeckNodeMapper {
 	final ObjectMeta metadata = k8sNode.getMetadata();
 	final NodeStatus nodeStatus = k8sNode.getStatus();
 	final NodeSystemInfo nodeInfo = nodeStatus.getNodeInfo();
-	final Map<String,Object> additionalProperties = nodeInfo.getAdditionalProperties();
 	node.setNodename(metadata.getName());
 	node.setUsername(username);
-	node.setOsFamily(additionalProperties.get("operatingSystem").toString());
-	node.setOsArch(additionalProperties.get("architecture").toString());
+	node.setOsFamily(nodeInfo.getOperatingSystem().toString());
+	node.setOsArch(nodeInfo.getArchitecture().toString());
 	node.setOsName(nodeInfo.getOsImage());
 	node.setOsVersion(nodeInfo.getKernelVersion());
 	node.setAttribute("KubeletVersion", nodeInfo.getKubeletVersion());
