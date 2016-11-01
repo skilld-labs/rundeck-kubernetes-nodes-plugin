@@ -19,7 +19,7 @@
 * Created: Oct 18, 2010 7:03:37 PM
 * 
 */
-package com.jbguerraz.rundeck.plugin.resources.kubernetes;
+package com.skilld.rundeck.plugin.resources.kubernetes;
 
 import io.fabric8.kubernetes.client.Config;
 import io.fabric8.kubernetes.client.DefaultKubernetesClient;

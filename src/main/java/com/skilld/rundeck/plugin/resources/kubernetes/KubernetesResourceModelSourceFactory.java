@@ -19,7 +19,7 @@
 * Created: 9/22/2016 4:42 PM
 * 
 */
-package com.jbguerraz.rundeck.plugin.resources.kubernetes;
+package com.skilld.rundeck.plugin.resources.kubernetes;
 
 import com.dtolabs.rundeck.core.common.Framework;
 import com.dtolabs.rundeck.core.plugins.Plugin;
