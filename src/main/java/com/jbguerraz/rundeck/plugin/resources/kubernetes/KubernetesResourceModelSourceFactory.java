@@ -62,7 +62,7 @@ public class KubernetesResourceModelSourceFactory implements ResourceModelSource
             .property(PropertyUtil.integer(REFRESH_INTERVAL, "Refresh Interval", "Minimum time in seconds between API requests to Kubernetes (default is 30)", false, "30"))
             .property(PropertyUtil.string(LABEL_SELECTORS, "Label selectors", "Kubernetes node label selectors", false, null))
             .property(PropertyUtil.string(USERNAME, "Username", "The username used for SSH connections", true, null))
-            .property(PropertyUtil.string(SSH_PORT, "SSH Port", "The port used for SSH connections (default is 22)", true, "22"))
+            .property(PropertyUtil.integer(SSH_PORT, "SSH Port", "The port used for SSH connections (default is 22)", true, "22"))
             .build();
 
     public Description getDescription() {
