@@ -51,8 +51,8 @@ repositories {
 }
 
 dependencies {
-    compile group: 'org.rundeck', name: 'rundeck-core', version: '2.9.3'
-    pluginLibs group: 'io.fabric8', name: 'kubernetes-client', version: '2.6.3'
+    compile group: 'org.rundeck', name: 'rundeck-core', version: '2.10.8'
+    pluginLibs group: 'io.fabric8', name: 'kubernetes-client', version: '3.1.10'
 }
 
 // task to copy plugin libs to output/lib dir
